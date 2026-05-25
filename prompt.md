@@ -1,66 +1,261 @@
-As a Frontend Developer focused on building cutting-edge web applications, your task is to develop a performance-efficient personal website portfolio. In this context, your website should utilize Framer Motion technology to enable captivating and responsive animations with story-like content based on scrolling.
-Apart from this, your website should feature a narrative-based presentation of your projects, skills, and experience, making users feel engaged in the browsing process. Finally, your portfolio will need to have a working contact form which will collect users’ data and send the website owner an email notification.
-Objective
+# Full-Stack Animated Portfolio Website
+
+## Context and Role
+
+As a Frontend Developer focused on building cutting-edge web applications, your task is to develop a performance-efficient personal website portfolio. The website should utilize **Framer Motion** to create captivating, responsive animations with story-like content driven by scrolling interactions.
+
+The portfolio should present projects, skills, and experience in a narrative-based format that keeps users engaged throughout the browsing experience.
+
+Additionally, the portfolio must include a fully functional contact system capable of collecting user information and sending an email notification to the website owner.
+
+---
+
+# Objective
+
 Develop a complete full-stack portfolio website that:
-Implements scroll-based storytelling animations using Framer Motion.
-Provides a modern, responsive UI with smooth transitions.
-Includes a “Get in Touch” button that opens a contact form modal.
-Logs user submissions securely.
-Triggers an email to the portfolio owner with the submitted details.
-UI and Animation Requirements
-Scroll-Based Storytelling
+
+- Implements scroll-based storytelling animations using Framer Motion
+- Provides a modern, responsive UI with smooth transitions
+- Includes a “Get in Touch” button that opens a contact form modal
+- Logs user submissions securely
+- Triggers an email notification to the portfolio owner with submitted details
+
+---
+
+# UI and Animation Requirements
+
+## Scroll-Based Storytelling
+
 Implement scroll-triggered animations using Framer Motion.
-Use parallax effects, fade-ins, and staggered transitions.
-Animate sections sequentially to create a narrative flow.
-Include smooth transitions between:
-Hero Section
-About Section
-Skills Section
-Projects Section
-Contact Section
+
+### Required Animation Features
+
+- Parallax scrolling effects
+- Fade-in animations
+- Staggered transitions
+- Sequential section animations
+- Smooth storytelling flow between sections
+
+### Portfolio Sections
+
+The storytelling experience should smoothly transition between:
+
+- Hero Section
+- About Section
+- Skills Section
+- Projects Section
+- Contact Section
+
+### Performance Requirements
+
 Ensure animations:
-Are performant (avoid layout thrashing)
-Use GPU-friendly properties (transform, opacity)
-Do not block scroll performance
-Layout Requirements
+
+- Avoid layout thrashing
+- Use GPU-friendly properties such as:
+  - `transform`
+  - `opacity`
+- Do not negatively impact scroll performance
+
+---
+
+# Layout Requirements
+
 The portfolio must include:
-Hero section with animated introduction
-About section with animated text reveal
-Skills section with animated progress indicators
-Projects section with hover interactions and motion transitions
-Call-to-action section with “Get in Touch” button
-The layout must be:
-Fully responsive (mobile, tablet, desktop)
-Accessible (ARIA labels, semantic HTML)
 
+## Hero Section
 
-Optimized for performance
+- Animated introduction
+- Engaging headline animations
+- Smooth call-to-action interactions
 
+## About Section
 
+- Animated text reveal
+- Scroll-based storytelling transitions
 
-Contact System Requirements
-Modal Behavior
+## Skills Section
+
+- Animated progress indicators
+- Motion-enhanced skill cards
+
+## Projects Section
+
+- Hover interactions
+- Framer Motion transitions
+- Interactive project showcase
+
+## Call-to-Action Section
+
+- “Get in Touch” button
+- Animated hover and click effects
+
+---
+
+# Responsive Design Requirements
+
+The website must be:
+
+- Fully responsive
+- Optimized for:
+  - Mobile
+  - Tablet
+  - Desktop
+- Accessible using:
+  - Semantic HTML
+  - ARIA labels
+  - Keyboard navigation support
+- Performance optimized
+
+---
+
+# Contact System Requirements
+
+## Modal Behavior
+
 Clicking the “Get in Touch” button must:
 
+- Open a modal contact form
+- Animate modal entry and exit using Framer Motion
+- Prevent background scrolling
+- Maintain accessibility standards
 
-Open a modal contact form
+---
 
+# Contact Form Fields
 
-Animate modal entrance and exit using Framer Motion
+The modal form must contain:
 
+| Field         | Requirement |
+|----------------|-------------|
+| Name           | Required |
+| Email          | Required + Validated |
+| Phone Number   | Required + Validated |
+| Message        | Optional |
 
-Contact Form Fields
-Name (required)
+---
 
+# Validation Requirements
 
-Email (required, validated)
+Implement client-side validation with:
 
+- Proper error messages
+- Email format validation
+- Phone number validation
+- Prevention of invalid submissions
+- Accessible validation feedback
 
-Phone Number (required, validated)
+---
 
+# Backend Requirements
 
-Message (optional)
+Create a backend API that:
 
+- Handles form submissions securely
+- Logs submissions safely
+- Sends email notifications to the portfolio owner
+- Returns structured JSON responses
 
-Validation
+---
 
+# Email Notification Requirements
+
+The email notification must include:
+
+- Name
+- Email
+- Phone Number
+- Message
+- Submission Timestamp
+
+Use:
+
+- Nodemailer
+- SMTP or transactional email service
+- Environment variables for credential security
+
+---
+
+# Security Requirements
+
+Sanitize all user inputs to prevent:
+
+- XSS attacks
+- Injection attacks
+- Spam submissions
+
+Implement:
+
+- Input sanitization
+- Rate limiting or CAPTCHA
+- Proper validation
+
+---
+
+# API Response Format
+
+## Success Response
+
+```json
+{
+  "success": true,
+  "message": "Message sent successfully"
+}
+```
+
+## Error Response
+
+```json
+{
+  "success": false,
+  "error": "Validation failed"
+}
+```
+
+---
+
+# Technology Stack
+
+## Frontend
+
+- React or Next.js
+- Framer Motion
+- Tailwind CSS
+
+## Backend
+
+- Node.js + Express OR Next.js API Routes
+- Nodemailer
+- dotenv
+
+## Optional Database
+
+- MongoDB
+- PostgreSQL
+
+---
+
+# Performance Requirements
+
+Optimize the application for:
+
+- Fast loading
+- Smooth animations
+- Bundle size reduction
+- Lazy loading
+- SEO optimization
+- Accessibility compliance
+
+---
+
+# Expected Output
+
+The final project should include:
+
+- Smooth animated storytelling experience
+- Responsive portfolio UI
+- Functional animated contact modal
+- Secure backend integration
+- Email notification system
+- Graceful error handling
+- Deployment-ready architecture
+- Documentation for setup and environment variables
